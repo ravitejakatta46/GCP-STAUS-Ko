@@ -1,0 +1,131 @@
+{% extends "region-PI.html" %}
+{% block body %}
+<div>
+<button style="position:absolute;right:20px;top:20px"><a href="/logout" class="btn btn-primary" role="button" aria-pressed="true">Logout</a></button>
+</div>                                                                                                             
+<div class="bootom">
+<form action=/selectedinstance/{{region}}/{{projectid}} method="GET">
+	<table class="text" style="width: 60%">
+        <tr>
+	    <td>
+                <label>Environment:</label>
+            </td>
+            <td>
+                <input type="text" name="environmentname" id="autocomplete"/>
+            </td>
+<td style="width:5%"></td>
+            <td>
+                <input id="btnQuery" type="submit" value="Query" class="btnQuery" />
+            </td>
+	</tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+<tr></tr>
+	</form>
+</div>
+<br/>
+<div>
+
+<div class="text">
+<p><strong>Region : {{region}}</strong></p>
+<p><strong>Project Id : {{projectid}}</strong></p>
+{%if showtable == True %}
+<p><strong>Environment : {{environment}}</strong></p>
+{% endif %}
+</div>
+<br />
+<div>
+{%if showtable == True %}
+<table align="center" class="table" style="width:60%">
+        <tr>
+            <td class="td"><b>Name</b></td>
+            <td class="td"><b>Zone</b></td>
+            <td class="td"><b>Instance Stopped/Started by</b></td>
+	        <td class="td"><b>Time of Action</b></td>
+            <td class="td"><b>Status</b></td>
+	    <td class="td"><b>Action</b></td>
+        </tr>
+{%for instance in instances%}
+
+
+        <tr>
+            <td class="td">{{ instance['name'] }}</td>
+            <td class="td">{{ instance['zone'] }}</td>
+            <td class="td">{{ instance['user'] }}</td>
+            <td class="td">{{ instance['time'] }}</td>
+            {%if instance['status']== 'TERMINATED' %}
+            <td class="td status red">STOPPED</td>
+            {%else%}
+            <td class="td status green">{{ instance['status'] }}</td>
+            {% endif %}
+            
+
+<td class="td">
+                {%if instance['status']== 'RUNNING' %}
+                
+                    <input data-ajax="/instances/{{ instance['zone'] }}/{{projectid}}/{{ instance['name'] }}/stop" class="action-button" type="button" value="Stop Instance"/>
+                
+                {%elif instance['status']=='TERMINATED' or 'STOPPED' %}
+                
+                
+                    <input data-ajax="/instances/{{ instance['zone'] }}/{{projectid}}/{{ instance['name'] }}/start" class="action-button" type="button" value="Start Instance"/>
+                    
+                </td>
+                    
+        {% endif %}
+
+
+
+{% endfor %}
+    </table>
+{% endif %}
+</div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+
+var environmentnames = [
+{% for item in instancesList%}
+   { value: '{{ item['name'] }}', data: '{{ item['name'] }}' },
+{% endfor %}
+];
+
+$('#autocomplete').autocomplete({
+    lookup: environmentnames,
+});
+
+$(function() {
+    $(".action-button").click(function(){
+        url = $(this).data("ajax");
+        $this = $(this);
+
+        $.ajax(url)
+        .done(function() {
+            var currentAction = $this.val();
+            var newAction = currentAction.search("Start") != -1 ? "Stop Instance" : "Start Instance";
+            var status = currentAction.search("Start") != -1 ? "RUNNING" : "STOPPED";
+            var color = currentAction.search("Start") != -1 ? "green" : "red";
+            var pre_color = currentAction.search("Start") != -1 ? "red" : "green";
+            console.log(currentAction, newAction);
+            console.log(color, pre_color);
+            $this.val(newAction);
+            var td = $this.closest('tr').find(".status")
+            td.text(status);
+            td.toggleClass(pre_color + " " + color);
+        })
+        .fail(function() {
+            alert( "Not able to start/stop the instance" );
+        });
+    });
+});
+
+</script>
+{% endblock %}
+

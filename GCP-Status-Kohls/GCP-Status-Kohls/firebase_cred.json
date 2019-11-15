@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cloud-migration-solution",
+  "private_key_id": "7f63d74c6a0e85e0759e61fd860b0c2ac681e3a8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDK3iGsejVkTofs\ny0FXrrq5yPZcQGCQTD+eO8KmJpK66b454+mbnJmHKvl4uK92Vbms5a/kzcwCvElQ\nNU1xBF344ZnIbTCcHw0IE+CLwZ8zyUyJ6QFPrdvWTv3XAiIrxEqBEtZ34HifhU8t\nZIxtfjvSO4xP06cJeuELyqVpLPXrl98bxvXcd2DS+7Q5VwWaOj1EXpKRprfylvUG\nb7bslPlwOc5yYyY9Ke5pI2lRvhzDRm6OlqJDF2PdgW7Ih6EieRve6l7JmcKKPkVb\ncn/Dj/4o9ehx4uhQXkIe6VQ0nIDKOXm2MaF0Wyq7lZXEOMQ793T7vuslMULfie6J\nTzPWNe2ZAgMBAAECggEAOqi8R+kWYyip+PhUrovhhjLruYUL5u2FP7W79NsWdmF8\nFbUnKU3AvurYM+YDJk5nX+0STTCMmwXilQS0ncdLfNmO4/teoOYBmKJWvVKBPDIq\npX3wWR/Gf1Nb5r3BL7KUcHoH9aW8ezPKzy9Rw59KoOGDEtn6ZK1ZQVWZOq47daFy\nLZovDzHfdP0R03zOqC3UCYRYcD3qVYPYd83dqZ5vwHqJyL1ufbX0KXcdtL/F5t/R\nifBK9XYkzaVevZuhRRDlG9j055RWDwhpODJVcxsJT58SUl2RSEM1FuxZ96mKw4tr\nUKHyBGw+e96q68uoeyzzGQczr+qt4etn8xJAgZ2OOQKBgQD3kCBXwQeC+Pa/Aa/q\nb6Vk4APS6Z5o7lPeCJzYVmg5ft+SgKYenlS8nvhUPoTmcso5uSlzIxmrjQtuBPne\n+Pwv6rEmaSW5eOhvzb3VQHejy8jY1on/0Ltx81c2f4UVlNqYkVCuWmyAWI+iP8+e\ncfUuCc58SKC/4rbIOVp6hqAzlwKBgQDRyA8rjqh9D1HXaJMcSaxSR/rcV5ERgNeA\no3FCSq8Rf8o437pIxgfULbbOV7IAwUqDirIYmEoY/T3hYdmWYfs7DdYNYhWqL/fH\njL01a+8JPuIV4fmeao4SXRpphWIsUmLQA35udnCjoXKHHOUonWHPjP6AANF+adOx\nGYm8hyJOTwKBgQC3M+ZraoLXjsxzD5mSgSrBmvHZfF9pQa2462C+zDr3CYgED8Zf\ndEY7C92z4kxRifNTgk5FUV1m0cr6kR4kvtdJ0oFkbn2nYu2IB5aLINko0t8AcMvR\nDzQYIL+Sqg3fqbeXHjq5vFr9JAyvQk+v7p9FgaZX3RtwxSMEy0TE1anqYwKBgGuX\nO5CPXgKl9MeRrsF3V5XrrNGNZ62ecuha6x+gxiEndUOuGxBv4FwGBhfWCkkw2VKV\ns7nBgV9HopERalMidYNYGUxL3einKWGC4Reg/7uyMKogd7Gz3KG2dnFgI3Wv21Xs\nNM/alvKVPvPk8fLepOeZ3H0x7j/zbssJ2gaDGCkpAoGAZkFeLjq0+D8XAarb8Mgh\npg+Kp7zhiR/1k0ZgOrFOWFlRmBaAlIST6y0ZtbxgyHaXBICYJGC1xY8AyRxery29\nytoln+hH9dKFlRr3ywdqhnB4RIEhQuTNYPe5TKZakJLk4AS2Ovi/qj7QvEQBQZDn\n0CGH4I5132UPjXeHmHcqAGI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-ilyna@cloud-migration-solution.iam.gserviceaccount.com",
+  "client_id": "101083636359148608185",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ilyna%40cloud-migration-solution.iam.gserviceaccount.com"
+}

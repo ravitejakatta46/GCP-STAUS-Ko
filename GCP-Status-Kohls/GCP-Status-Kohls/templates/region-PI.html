@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block body %}
+<br/><br/><br/><br/>
+<div>
+    
+<button style="position:absolute;right:20px;top:20px"><a href="/logout" class="btn btn-primary" role="button" aria-pressed="true">Logout</a></button>
+</div>
+<form action="/instances" method="GET">
+        <table align="center" style="width: 80%">
+        <tr>
+            <td>
+                <label>Region:</label>
+            </td>
+            <td>
+                <select class="Editabletxtbox" name="regionname">
+       if type(request.args.get('environmentname')) id not None:
+                    <option value="US">--SELECT--</option>
+                    <option value="us-central1">us-central1</option>
+                </select>
+            </td>
+            <td style="width:5%"></td>
+            <td>
+                <label>Project ID's:</label>
+            </td>
+            <td>
+                <select class="Editabletxtbox" name="projectName">
+                    <option value="0">--SELECT--</option>
+                    <option value="cloud-migration-solution">cloud-migration-solution</option>
+                </select>
+            </td>
+            <td style="width:5%"></td>
+	    <td>
+                <input id="btnQuery" type="submit" value="Query" class="btnQuery" />
+            </td>
+        </tr>
+        </table>
+</form>
+
+{% endblock %}
