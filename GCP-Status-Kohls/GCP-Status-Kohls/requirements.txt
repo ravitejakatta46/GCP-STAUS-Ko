@@ -4,7 +4,7 @@ google-cloud
 pyOpenSSL==19.0.0
 Flask-Login==0.4.1
 oauthlib==2.0.6
-requests==2.21.0
+requests==2.31.0
 Flask-OAuth
 gunicorn
 oauth2client
